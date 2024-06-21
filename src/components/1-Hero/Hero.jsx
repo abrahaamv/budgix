@@ -12,21 +12,22 @@ function Hero() {
           <img src='./budgiX.svg' className="logo" alt="budgiX logo" />
         </a>
       </div>
-      <h1>The distro build to be Fast</h1>
+      <h1 className='title'>
+        The distro build to be Fast
+        <span className='right-section animation '>
+          <Lottie
+            lottieRef={lottieRef}
+            className='pill-animation'
+            onLoadedImages={() => {
+              lottieRef.current.setSpeed(0.5)
+            }}
+            animationData={devAnimation}
+          />
+        </span>
+      </h1>
       <button>Download</button>
-      <span>I want to know more</span>
-      <div className='right-section animation '>
-        <Lottie
-          lottieRef={lottieRef}
-          className=''
-          onLoadedImages={() => {
-            // @ts-ignore
-            // https://lottiereact.com/
-            lottieRef.current.setSpeed(0.5)
-          }}
-          animationData={devAnimation}
-        />
-      </div>
+      <h3>I want to know more</h3>
+
     </>
   )
 }
