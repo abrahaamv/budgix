@@ -1,5 +1,8 @@
 import Lottie from 'lottie-react'
-import devAnimation from '../../animation/pills/Yours.json'
+import builtAnimation from '../../animation/pills/Built.json'
+import fasterAnimation from '../../animation/pills/Faster.json'
+import saferAnimation from '../../animation/pills/Safer.json'
+import yoursAnimation from '../../animation/pills/Yours.json'
 import Carousel from "../1-Hero/Carousel/Carousel"
 import { useRef } from 'react'
 import './hero.css'
@@ -16,11 +19,33 @@ function Hero() {
             lottieRef={lottieRef}
             className='pill-animation'
             onLoadedImages={() => {
-              lottieRef.current.setSpeed(0.5)
+              lottieRef.current.setSpeed(0.3)
             }}
-            animationData={devAnimation}
+            animationData={fasterAnimation}
           />
           Fast
+        </span>
+        <span className='pill-container'>
+          <Lottie
+            lottieRef={lottieRef}
+            className='pill-animation'
+            onLoadedImages={() => {
+              lottieRef.current.setSpeed(0.3)
+            }}
+            animationData={saferAnimation}
+          />
+          Safer
+        </span>
+        <span className='pill-container'>
+          <Lottie
+            lottieRef={lottieRef}
+            className='pill-animation'
+            onLoadedImages={() => {
+              lottieRef.current.setSpeed(0.3)
+            }}
+            animationData={yoursAnimation}
+          />
+          Yours
         </span>
 
       </h1>
