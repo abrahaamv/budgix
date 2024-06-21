@@ -2,6 +2,7 @@ import CarouselItem from "./CarouselItem"
 import image1 from '../../assets/images/image.jpg';
 import image2 from '../../assets/images/image.jpg';
 import image3 from '../../assets/images/image.jpg';
+import './carousel.css'
 
 const Carousel = () => {
     const carouselItems = [
@@ -24,6 +25,10 @@ const Carousel = () => {
     return (
         <>
             <div className="carousel-container">
+                <div className="carousel-animation">
+                    <h1>The fast way to migrate your system</h1>
+                    <img src={image3} alt="animation" />
+                </div>
                 <div className="carousel-grid">
                     {carouselItems.map((item, index) => (
                         <CarouselItem

@@ -1,0 +1,8 @@
+.carousel-container {
+    display: grid;
+    place-content: center;
+    width: 100%;
+}
+.carousel-container .carousel-animation img {
+    width: 80%;
+}
