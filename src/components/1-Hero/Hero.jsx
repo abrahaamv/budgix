@@ -11,47 +11,63 @@ function Hero() {
   const lottieRef = useRef()
   return (
     <section className='hero flex'>
-      <img src='./budgiX.svg' className="logo" alt="budgiX logo" />
-      <h1 className='title'>
-        The distro build to be
-        <span className='pill-container'>
-          <Lottie
-            lottieRef={lottieRef}
-            className='pill-animation'
-            onLoadedImages={() => {
-              lottieRef.current.setSpeed(0.3)
-            }}
-            animationData={fasterAnimation}
-          />
-          Fast
-        </span>
-        <span className='pill-container'>
-          <Lottie
-            lottieRef={lottieRef}
-            className='pill-animation'
-            onLoadedImages={() => {
-              lottieRef.current.setSpeed(0.3)
-            }}
-            animationData={saferAnimation}
-          />
-          Safer
-        </span>
-        <span className='pill-container'>
-          <Lottie
-            lottieRef={lottieRef}
-            className='pill-animation'
-            onLoadedImages={() => {
-              lottieRef.current.setSpeed(0.3)
-            }}
-            animationData={yoursAnimation}
-          />
-          Yours
-        </span>
+      <div className="hero-main">
+        <img src='./budgiX.svg' className="logo" alt="budgiX logo" />
 
-      </h1>
-      <button>Download</button>
-      <h3>I want to know more</h3>
-      <Carousel />
+        <div className="left-section">
+          <h1 className='title'>
+            The distro crafted to be
+          </h1>
+        </div>
+
+        <div className="right-section">
+          <h2 className='sub-title'>
+            <span className='pill-container'>
+              <Lottie
+                lottieRef={lottieRef}
+                className='pill-animation'
+                onLoadedImages={() => {
+                  lottieRef.current.setSpeed(0.3)
+                }}
+                animationData={fasterAnimation}
+              />
+            </span>
+            Fast
+          </h2>
+
+          <h2 className='sub-title'>
+            <span className='pill-container'>
+              <Lottie
+                lottieRef={lottieRef}
+                className='pill-animation'
+                onLoadedImages={() => {
+                  lottieRef.current.setSpeed(0.3)
+                }}
+                animationData={saferAnimation}
+              />
+            </span>
+            Reliable
+          </h2>
+          <h2 className='sub-title'>
+            <span className='pill-container'>
+              <Lottie
+                lottieRef={lottieRef}
+                className='pill-animation'
+                onLoadedImages={() => {
+                  lottieRef.current.setSpeed(0.3)
+                }}
+                animationData={yoursAnimation}
+              />
+            </span>
+            Yours
+          </h2>
+        </div>
+      </div>
+      <div className="hero-download">
+        <button>Download</button>
+        <h3>I want to know more</h3>
+        <Carousel />
+      </div>
     </section>
   )
 }
